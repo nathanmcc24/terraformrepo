@@ -10,7 +10,9 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
+                echo "b4 git"
                 git branch: 'main', url: 'https://github.com/nathanmcc24/terraformrepo.git'
+                echo "after git"
             }
         }
         stage('Install Terraform') {
